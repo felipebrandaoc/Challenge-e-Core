@@ -18,7 +18,7 @@ When('I click on {string} button', button => {
 });
 
 Then('I should be redirected to the page {string}', pageName => {
-  cy.contains(pageName).should('be.visible')
+  cy.validatePage(pageName)
 });
 
 Then('The application shows the message {string}', message => {

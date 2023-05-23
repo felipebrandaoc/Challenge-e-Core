@@ -6,7 +6,7 @@
 # O objetivo dessa feature é testar a Página de Login, incluindo cenários positivos e negativos. (pt-BR)
 
 Feature: Login Page
-
+    @Positive
     Scenario: TC001 - Login Successfully
         Given I have the main page loaded
         When I fill the email field with "demouser"
@@ -14,6 +14,7 @@ Feature: Login Page
         And I click on "Login" button
         Then I should be redirected to the page "Invoice List"
 
+    @Negative
     Scenario Outline: TC002 - Invalid Login
         Given I have the main page loaded
         When I fill the email field with "<email>"

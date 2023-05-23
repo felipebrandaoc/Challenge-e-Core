@@ -27,3 +27,7 @@
 Cypress.Commands.add('clickButton', (button) => {
     cy.get('button').contains(button).click()
 });
+
+Cypress.Commands.add('validatePage', (pageName) => {
+    cy.contains(pageName).should('be.visible')
+});
